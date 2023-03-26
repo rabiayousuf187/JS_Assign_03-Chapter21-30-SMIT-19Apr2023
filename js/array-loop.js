@@ -1,400 +1,346 @@
 function ques1(){
-//     1. Write a program that take two numbers & add them in a
-// new variable. Show the result in your browser
+ //    1.   Declare and initialize an empty multidimensional array.
+        //         (Array of arrays)
 
-var num_1 = 3, num_2 = 5, add;
+        // declare
+        var multi_dimension_array = [];
 
-        add = num_1 + num_2;
-        document.write("<p>Sum of" + " " + num_1 + " and " + num_2 + " is " + add + "</p>");
-        console.log("Sum of" + " " + num_1 + " and " + num_2 + " is " + add);
+        // Initialize
+        multi_dimension_array  = [
+                                  [], 
+                                  [],
+                                  [] 
+                                ];
+
+        document.write("var multi_dimension_array = [];<br>");
+        document.write(`Multi Deminsion Array:<br>multi_dimension_array  = [
+                [], 
+                [],
+                [] 
+              ];`);
+        console.log("Multi Deminsion Array: ", multi_dimension_array);
 
 
 }
 
 function ques2(){
 
-//     2. Repeat task1 for subtraction, multiplication, division &
-// modulus.
+ //    2. Declare and initialize a multidimensional array
+        //       representing the following matrix:
 
-var num_1 = 3, num_2 = 5;
-        var add, sub, mul, div, modulus;
+        // Show as
+                    // 0 1 2 3 
+                    // 1 0 1 2
+                    // 2 1 0 1  
+        // declare
+        var multi_dimension_array = [];
 
-        add = num_1 + num_2;
-        document.write("<p>Sum of" + " " + num_1 + " and " + num_2 + " is " + add + "</p>");
-        console.log("Sum of" + " " + num_1 + " and " + num_2 + " is " + add);
+        // Initialize
+        multi_dimension_array  = [
+                                  [0 , 1 , 2 , 3], 
+                                  [1 , 0 , 1 , 2],
+                                  [2 , 1 , 0 , 1] 
+                                ];
 
-        sub = num_1 - num_2;
-        document.write("<p>Subtraction of" + " " + num_1 + " and " + num_2 + " is " + sub + "</p>");
-        console.log("Subtraction of" + " " + num_1 + " and " + num_2 + " is " + sub);
+        console.log("Multi Deminsion Array: ", multi_dimension_array);
+        document.write("<h4>MultiDimension Array:</h4>");
+        for(var a = 0 ; a < 3 ; a++)
+        {
+            for(var b = 0 ; b < 4 ; b++)
+            {
+                document.write(multi_dimension_array[a][b] + "&nbsp;&nbsp;");
+            }
+                document.write("<br>");
+        }
 
-        mul = num_1 * num_2;
-        document.write("<p>Multiplication of" + " " + num_1 + " and " + num_2 + " is " + mul + "</p>");
-        console.log("Multiplication of" + " " + num_1 + " and " + num_2 + " is " + mul);
-
-        div = num_1 / num_2;
-        document.write("<p>Division of" + " " + num_1 + " and " + num_2 + " is " + div + "</p>");
-        console.log("Division of" + " " + num_1 + " and " + num_2 + " is " + div);
-
-        modulus = num_1 % num_2;
-        document.write("<p>Modulus of" + " " + num_1 + " and " + num_2 + " is " + modulus + "</p>");
-        console.log("Modulus of" + " " + num_1 + " and " + num_2 + " is " + modulus);
 }
 
 function ques3(){
+         //    3. Write a program to print numeric counting from 1 to 10.
+  
+        // declare
+        var  count;
 
-//     3. Do the following using JS Mathematic Expressions
-// a. Declare a variable.
-// b. Show the value of variable in your browser like “Value
-// after variable declaration is: ??”.
-// c. Initialize the variable with some number.
-// d. Show the value of variable in your browser like “Initial
-// value: 5”.
-// e. Increment the variable.
-// f. Show the value of variable in your browser like “Value
-// after increment is: 6”.
-// g. Add 7 to the variable.
-// h. Show the value of variable in your browser like “Value
-// MATH EXPRESSIONS | JAVASCRIPT
-// Page 2 of 9
-// after addition is: 13”.
-// i. Decrement the variable.
-// j. Show the value of variable in your browser like “Value
-// after decrement is: 12”.
-// k. Show the remainder after dividing the variable’s value
-// by 3.
-// l. Output : “The remainder is : 0”.
+        // Initialize
+        document.write("<h4>Counting from 1 to 10: </h4>");
+        for(count  = 1; count <= 10 ; count++)
+        {
+          document.write(count + "<br>");
 
-        var number;
-        document.write("<p>Value of variable after variable declaration is: "+ number + "</p>") ;
-        console.log("Value of variable after variable declaration is: " + number);
-
-        number = 5;
-        document.write("<p>Initial value: "+ number + "</p>") ;
-        console.log("Initial value: " + number);
-        
-        ++number;
-        document.write("<p>Value after Increment is: "+ number + "</p>") ;
-        console.log("Value after Increment is: " + number);
-
-        var add_7 = number + 7;
-        number = add_7;
-        document.write("<p>Value after addition is: "+ add_7 + "</p>") ;
-        console.log("Value after addition is: " + add_7);
-
-        --number;
-        document.write("<p>Value after decrement is: "+ number + "</p>") ;
-        console.log("Value after decrement is: " + number);
-
-        var modulus = number % 3;
-        document.write("<p>The Remainder is: "+ modulus + "</p>") ;
-        console.log("The Remainder is: " + modulus);
+        }
 }
 
 function ques4(){
-//     4. Cost of one movie ticket is 600 PKR. Write a script to
-// store
-// ticket price in a variable & calculate the cost of buying 5
-// tickets
-// to a movie. Example output:
+        
+        //   4. Write a program to print multiplication table of any
+        //      number using for loop. Table number & length should be
+        //      taken as an input from user.
 
-var ticketPrice = 600;  //1 ticket = 600PKR
-var no_ticket_buy = 5, cost ;
+ 
+        // declare
+        var table_num, 
+            table_length,
+            table_result;
 
-cost = ticketPrice * no_ticket_buy;
+        // Initialize table num
+        table_num = prompt("Enter a Number to show its multiplication table:")
+        
+        document.write("<h4>Multiplication table of " + table_num + ":</h4>");
 
-document.write("<p>Total cost to buy 5 tickets to a movie is " + cost + "PKR</p>") ;
-console.log("Total cost to buy 5 tickets to a movie is " + cost + "PKR");
+        if ( table_num !== null)
+        {
+            // Initialize table length
+            table_length = prompt("Enter length of multiplication table:")
+            
+            document.write("<h4>Length " + table_length + ":</h4>");
+            
+            console.log(table_num, table_length);
+
+            if ( table_length !== null)
+            {
+                
+                for(var a = 1 ; a <= table_length ; a++)
+                {
+                    table_result = table_num * a;
+                    document.write(table_num + " * " + a + " = " + table_result + "<br>");
+                }
+            }
+            else{
+                alert("You didn't enter Table length\nSession has been terminated.")
+            }
+        }
+        else{
+            alert("You Quit the Session.")
+        }
 
 }
 
 function ques5(){
-//     5. Write a script to display multiplication table of any
-// number in your browser.
+        // 5. Write a program to print items of the following array
+        // using for loop:
+        // fruits = [“apple”, “banana”, “mango”, “orange”,“strawberry”]
 
-// Table of 4 or any number
-var table_of_no = 4, result;  //table_of_no
-        
-document.write("Table of "+table_of_no+":<br>") ;
-for(var a=1 ; a<= 10; a++)
-{
-    result = table_of_no * a;
-    document.write(table_of_no + "*" + a + "=" + result + "<br>") ;
-}
 
+        // declare
+        var fruits = [];
+
+        // Initialize table num
+        fruits = [ "apple" ,  "banana",  "mango" ,  "orange" , "strawberry" ];
+
+        document.write("<h4>Print Array Item using Loop: </h4>");
+
+        // Display array items 
+        for(var a = 0 ; a < fruits.length ; a++)
+        {
+                document.write(fruits[a] + "<br>");
+        }
+        document.write("<br><br>");
+        for(var b = 0 ; b < fruits.length ; b++)
+        {
+                document.write("Elements at index " + b + " is " + fruits[b] + ".<br>");
+        }
 }
 
 function ques6(){
-//     6. The Temperature Converter: It’s hot out! Let’s make a
-// converter based on the steps here.
-// a. Store a Celsius temperature into a variable.
-// b. Convert it to Fahrenheit & output “NNoC is NNoF”.
-// c. Now store a Fahrenheit temperature into a variable.
-// d. Convert it to Celsius & output “NNoF is NNoC”.
+        // 6. Generate the following series in your browser. See
+        //     example output.
+        //     a. Counting: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
+        //     b. Reverse counting: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+        //     c. Even: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20
+        //     d. Odd: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19
+        //      12k, 14k, 16k, 18k, 20k
 
-var temp_celsius = 25,  
-temp_fahrenheit = 70,
-convert_into_fahrenheit,
-convert_into_celsius;
+        // declare
+        var even, odd;
 
-convert_into_fahrenheit = (temp_celsius * 1.8) + 32;
-document.write("Celsius convert into Fahrenheit <br> " + temp_celsius + "°C " + " is " + convert_into_fahrenheit + "°F" + "<br><br><br>") ;
 
-convert_into_celsius = ((temp_fahrenheit - 32) * 5) / 9;
-document.write("Fahrenheit convert into Celsius <br>" + temp_fahrenheit + "°F " + " is " + convert_into_celsius + "°C" + "<br>") ;
+        counting = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
+
+
+        document.write("<h4>Generate Series:</h4>");
+        
+        // Display Counting 
+        document.write("<h4>Counting: </h4>");
+        for(var a = 1 ; a <= 15 ; a++)
+        {
+            document.write(a + ",");
+        }
+        document.write("<br><br>");
+
+        // Display Reverse Counting 
+        document.write("<h4>Reverse Counting: </h4>");
+        for(var b = 10 ; b > 0 ; b--)
+        {
+            document.write(b + ",");
+        }
+        document.write("<br><br>");
+
+        // Display Even 
+        document.write("<h4>Even: </h4>");
+        
+        for(var b = 0 ; b <= 20 ; b++)
+        {
+            if( ( b%2 ) == 0 )
+            {
+                even = b;
+                console.log(even);
+                document.write(even + ",");
+            }
+                
+        }
+
+        document.write("<br><br>");
+
+        // Display Odd 
+         document.write("<h4>Odd: </h4>");
+        for(var b = 0 ; b <= 20 ; b++)
+        {
+            if( ( b%2 ) !== 0 )
+            {
+                odd = b;
+                console.log(odd);
+                document.write(odd + ",");
+            }
+                
+        }
+
+        // Display Series 
+        document.write("<h4>Series: </h4>");
+        for(var b = 2 ; b <= 20 ; b+=2)
+        {
+            if( ( b%2 ) == 0 )
+            {
+                even = b;
+                console.log(even);
+                document.write(even + "k,");
+            }
+                
+        }
 }
 
 function ques7(){
-//     7. Write a program to implement checkout process of a
-// shopping cart system for an e-commerce website. Store
-// the following in variables
-// MATH EXPRESSIONS | JAVASCRIPT
-// Page 5 of 9
-// a. Price of item 1
-// b. Price of item 2
-// c. Ordered quantity of item 1
-// d. Ordered Quantity of item 2
-// e. Shipping charges
-// Compute the total cost & show the receipt in your browser.
+       // 7. You have an array
+    // A = [“cake”, “apple pie”, “cookie”, “chips”, “patties”]
+    // Write a program to enable “search by user input” in an
+    // array.
+    // After searching, prompt the user whether the given item is
+    // found in the list or not. 
 
-// Item 1
-var item_1_price = 100, 
-item_1_quantity = 5,
-// Item 2
-item_2_price = 250,
-item_2_quantity = 5,
-shipping_charges = 1000;
+        // declare
+        var  bakert_items,
+        search_input,
+        pos_search_input;
 
-var total_price_of_item_1,
-total_price_of_item_2,
-total_cost_of_order;
 
-total_price_of_item_1 = item_1_price * item_1_quantity;
+        bakert_items = [ "cake" ,  "apple pie",  "cookie" ,  "chips" ,  "patties" ];
 
-total_price_of_item_2 = item_2_price * item_2_quantity;
 
-total_cost_of_order = total_price_of_item_1 + total_price_of_item_2 + shipping_charges;
-
-document.write("<h1>Shopping Cart</h1<br><br><br></h1>");
-
-document.write("<p>Price of item 1 " + "is " + item_1_price + "</p>");
-
-document.write("<p>Quantity of item 1 " + "is " + item_1_quantity + "</p>");
-
-document.write("<p>Price of  item 2 " + "is " + item_2_price + "</p>");
-
-document.write("<p>Quantity of item 2 " + "is " + item_2_quantity + "</p>");
-
-document.write("<p>Shipping Charges" + shipping_charges + "</p>");
-
-document.write("<p>Total cost of your order is " + total_cost_of_order + "</p>");
-
+        search_input = prompt("Welcome to My Bakery. What do you want to order sir/ma'am?\ncake , apple pie ,  cookie ,  chips ,  patties")
+        search_input = search_input.toLowerCase();
+        if (search_input != null)
+        {
+            // Index of match Item
+            pos_search_input = bakert_items.indexOf(search_input);
+            // index of match in array
+            // if match posi... is >= 0
+            // if not match posi... is = -1
+            console.log(pos_search_input);
+            if ( pos_search_input >= 0 )
+            {
+                alert(search_input + " is avaliable at index " + pos_search_input + " in our Bakery.");
+                document.write(search_input + " is <b>avaliable</b> at index " + pos_search_input + " in our Bakery.");
+            }
+            // if not match posi... is = -1
+            else
+            {
+                alert("We are sorry. " + search_input + " is not avaliable in our Bakery.");
+                document.write("We are sorry. " + search_input + " is <b>not avaliable</b> in our Bakery.");
+            }
+        }
+        else
+        {
+            alert("You Quit session.")
+        }
+    
 }
 
 function ques8(){
-//     8. Store total marks & marks obtained by a student in 2
-// variables. Compute the percentage & show the result in
-// your browser
+        // 8. Write a program to identify the largest number in the
+        // given array.
+        // A = [ 24 , 53 , 78 , 91 , 12 ].
 
-var total_marks = 950, 
-            marks_obtained = 775,
-            percentage;
+        // declare
+        var num, large_num = 0;  
 
-            percentage = (marks_obtained / total_marks) * 100;
 
-        document.write("<h1>Marks Sheet</h1<br><br><br></h1>");
+       num = [ 24 , 53 , 78 , 91 , 12 ];
+       
+        for(var a = 0; a < num.length ; a++)
+        {
 
-        document.write("<p>Total marks: " + total_marks + "</p>");
+            if( large_num < num[a])
+            {
+                console.log(num[a]);
+                large_num = num[a];
+                console.log("num[a]" ,  num[a]);
+                
+            }
 
-        document.write("<p>Marks obtained: " + marks_obtained + "</p>");
 
-        document.write("<p>Percentage: " + percentage + "%</p>");
+        }
+        console.log("large_num" , large_num);
+        document.write("<h4>Largest Number in Array:</h4><br>");
+        document.write("Array items: 24 , 53 , 78 , 91 , 12 <br><br>");
+        document.write("The Largest Number is " + large_num);
+       
 }
 
 function ques9(){
-//     9. Assume we have 10 US dollars & 25 Saudi Riyals. Write a
-// script to convert the total currency to Pakistani Rupees.
-// Perform all calculations in a single expression.
-// (Exchange rates : 1 US Dollar = 104.80 Pakistani Rupee
-// and 1 Saudi Riyal = 28 Pakistani Rupee)
+        
+        // 9. Write a program to identify the smallst number in the
+        // given array.
+        // A = [ 24 , 53 , 78 , 91 , 12 ].
 
-var us_dollars = 10,          /// us dollar
-            saudi_riyal = 5,        /// saudi_riyal
+        // declare
+       var num, small_num; 
 
-            one_us_dollar_in_pkr = 104.80,  //1 us_dollar = 104.80 PKR
-            one_saudi_riyal_in_pkr  = 28,   //1 saudi_riyal  = 28 PKR
-            
-            total_currency;
 
-            total_currency =  ( (us_dollars * one_us_dollar_in_pkr ) + (saudi_riyal  * one_saudi_riyal_in_pkr ));
+       num = [ 24 , 53 , 78 , 91 , 12 ];
+       
+        for(var a = 1; a < num.length ; a++)
+        {
 
-        document.write("<h1>Currency in PKR</h1<br><br><br><br></h1>");
+            if( num[0] > num[a])
+            {
+                console.log(num[a]);
+                small_num = num[a];
+                console.log("num[a]" ,  num[a]);
+                
+            }
 
-        document.write("<p>Total Currency in PKR: " + total_currency + "</p>");
 
+        }
+        console.log("small_num" , small_num);
+        document.write("<h4>Smallest Number in Array:</h4><br>");
+        document.write("Array items: 24 , 53 , 78 , 91 , 12 <br><br>");
+        document.write("The smallest Number is " + small_num);
 }
 
 function ques10(){
-//     10. Write a program to initialize a variable with some
-// number and do arithmetic in following sequence:
-// a. Add 5
-// b. Multiply by 10
-// c. Divide the result by 2
-// Perform all calculations in a single expression
+         //   10. Write a program to print multiples of 5 ranging 1 to 100.
 
-var number = 15;
-       
-        var arthematic;
+        // declare
+        var number_for_multi = 5,	
+        	result = 1;
 
-        arthematic = ( ( (number + 5) * 10 ) / 2 );
-
-       
-        document.write("<h4>Arthematic Sequence:</h4><h4>Steps:</h4>");
-
-        document.write("Initialize a variable with some number:<br>") ;
-        console.log("initialize a variable with some number: ");
-        
-        document.write("Add 5 with number:<br>") ;
-        console.log("Add 5 with number:");
-
-        document.write("Then Multiply by 10.<br>") ;
-        console.log("Then Multiply by 10.");
-
-        document.write("Divide the result by 2.<br>") ;
-        console.log("Divide the result by 2");
-
-        document.write("<br><br>Note:<br>Perform all calculations in a single expression.<br>") ;
-        console.log("Note:\nPerform all calculations in a single expression");
-
-//  Single Expression
-        document.write("<br><br>Initialize number = " + number + "<br>");
-        document.write("arthematic = ( ( (number + 5) * 10 ) / 2 );<br>");
-        document.write("<br>Result = " + arthematic);
+        console.log("Print Multiples of 5 Ranging 1 to 100:");
+        document.write("<h4>Print Multiples of 5 Ranging 1 to 100:</h4>");
+        for(var a = 1 ; result < 100 ; a++)
+        {
+            console.log(a);
+       		result = a * number_for_multi;
+            document.write(result + ",");
+        }
 }
 
-function ques11(){
-//     11. The Age Calculator: Forgot how old someone is?
-// Calculate it!
-// a. Store the current year in a variable.
-// b. Store their birth year in a variable.
-// c. Calculate their 2 possible ages based on the stored
-// values.
-// Output them to the screen like so: “They are either NN or NN
-// years old”.
-
-var current_year = 2019, 
-            birth_year = 2002;
-
-        var birth_year_for_possible,
-            age_1, age_2;
-
-        birth_year_for_possible = birth_year + 1;
-
-        //1st Possible Age
-        age_1 = current_year - birth_year;
-
-        //2nd Possible Age
-        age_2 = current_year - birth_year_for_possible;
-
-
-        document.write("<h1>Age Calculator</h1><br>");
-
-        document.write("Current Year: " + current_year + "<br>");
-        document.write("Birth Year: " + birth_year + "<br>");
-
-        document.write("<p>They are either " + "<b>" + age_1  + "</b> or <b>"  + age_2 + "</b> years old.</p>");
-
-}
-
-function ques12(){
-//     12. The Geometrizer: Calculate properties of a circle.
-// a. Store a radius into a variable.
-// MATH EXPRESSIONS | JAVASCRIPT
-// Page 8 of 9
-// b. Calculate the circumference based on the radius, and
-// output “The circumference is NN”.
-// (Hint : Circumference of a circle = 2 π r , π = 3.142)
-// Calculate the area based on the radius, and output “The
-// area is NN”. (Hint : Area of a circle = π r2, π = 3.142)
-
-// radius
-var radius = 100, 
-pi = 3.142;
-
-var circumference_of_a_circle,
-area_of_a_circle;
-
-// Circumference of a Circle
-circumference_of_a_circle = 2 * pi * radius;
-
-// Area of a Circle
-area_of_a_circle = pi * (radius * radius);
-// console.log((radius^2));
-
-document.write("<h1>The Geometrizer:</h1><br>");
-
-document.write("Radius of a Circle: " + radius + "<br>");
-document.write("The Circumference of a circle: " + circumference_of_a_circle + "<br>");
-
-document.write("The Area of a Circle: " + area_of_a_circle + "<br>");
-
-
-}
-
-function ques13(){
-//     13. The Lifetime Supply Calculator: Ever wonder how
-// much a “lifetime supply” of your favorite snack is?
-// Wonder no more.
-// a. Store your favorite snack into a variable
-// b. Store your current age into a variable.
-// c. Store a maximum age into a variable.
-// d. Store an estimated amount per day (as a number).
-// e. Calculate how many would you eat total for the rest of
-// your life.
-// Output the result to the screen like so: “You will need
-// NNNN to last you until the ripe old age of NN”.
-
-//  Years
-        var favorite_snack = "Chocolate",
-            snacks_per_day = 5,
-            current_age = 19, 
-            estimated_max_age = 75;
-
-        var one_year = 365;  ///days
-
-
-        var current_age_in_days,
-            estim_max_age_in_days,
-            remain_days_in_life,
-            remain_snacks_days_life,
-            remain_snacks_in_life;
-
-
-        // current_age_in_days
-        current_age_in_days = current_age * one_year;
-
-        // estim_max_age_in_days
-        estim_max_age_in_days = estimated_max_age * one_year;
-
-        // remaining_days_in_life 
-        remain_days_in_life = estim_max_age_in_days - current_age_in_days;
-
-        //snack takes in remaining_days_in_life  
-        remain_snacks_days_life = remain_days_in_life * snacks_per_day;
-
-        // remaining_snacks_in_life as year
-        remain_snacks_in_life = remain_snacks_days_life / 365; 
-
-        
-
-        document.write("<h1>The Lifetime Supply Calculator</h1><br>");
-
-        document.write("Favorite Snack: " + favorite_snack + "<br>");
-        document.write("Current age: " + current_age + "<br>");
-        document.write("Estimated Maximum Age: " + estimated_max_age + "<br>");
-        document.write("Amount of Snacks per day: " + snacks_per_day + "<br>");
-
-        document.write("You will need <b>" + remain_snacks_in_life + " " +favorite_snack + "</b> to last you until the ripe old age of <b>" + estimated_max_age + "</b>");
-
-        
-}
