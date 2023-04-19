@@ -302,17 +302,42 @@ function ques14() {
     // Whether the user enters cookie, Cookie, COOKIE or coOkIE, program should inform about its availability. 
     // Example:
     
-    // declare
-    var number_for_multi = 5,
-        result = 1;
+     // declare
+     let  bakert_items,
+     search_input,
+     pos_search_input;
 
-    console.log("Print Multiples of 5 Ranging 1 to 100:");
-    document.write("<h4>Print Multiples of 5 Ranging 1 to 100:</h4>");
-    for (var a = 1; result < 100; a++) {
-        console.log(a);
-        result = a * number_for_multi;
-        document.write(result + ",");
-    }
+
+     bakert_items = [ "cake" ,  "apple pie",  "cookie" ,  "chips" ,  "patties" ];
+
+
+     search_input = prompt("Welcome to My Bakery. What do you want to order \nsir/ma'am?\ncake , apple pie ,  cookie ,  chips ,  patties");
+     search_input = search_input.toLowerCase();
+     if (search_input != null && search_input != "")
+     {
+         // Index of match Item
+         pos_search_input = bakert_items.indexOf(search_input);
+         // index of match in array
+         // if match posi... is >= 0
+         // if not match posi... is = -1
+         console.log(pos_search_input);
+         if ( pos_search_input >= 0 )
+         {
+             alert(search_input + " is avaliable at index " + pos_search_input + " in our Bakery.");
+             document.write(search_input + " is <b>avaliable</b> at index " + pos_search_input + " in our Bakery.");
+         }
+         // if not match posi... is = -1
+         else
+         {
+             alert("We are sorry. " + search_input + " is not avaliable in our Bakery.");
+             document.write("We are sorry. " + search_input + " is <b>not avaliable</b> in our Bakery.");
+         }
+     }
+     else
+     {
+         alert("You Quit session.")
+     }
+
 }
 
 function ques15() {
@@ -324,17 +349,97 @@ function ques15() {
     // prompt the user to enter a valid password. 
     // For character codes of a-z, A-Z & 0-9, refer to ASCII table at the end of this document.
     
-    // declare
-    var number_for_multi = 5,
-        result = 1;
+    // Input
+    var password,
+        first_letter,
+        letter_check_low,
+        letter_check_upp,
+        spec_char_check,
+        first_let_num;
 
-    console.log("Print Multiples of 5 Ranging 1 to 100:");
-    document.write("<h4>Print Multiples of 5 Ranging 1 to 100:</h4>");
-    for (var a = 1; result < 100; a++) {
-        console.log(a);
-        result = a * number_for_multi;
-        document.write(result + ",");
-    }
+    var pattern_lower = /[a-z][0-9]/g; 
+    var pattern_upper = /[A-Z][0-9]/g; 
+    var pattern_Spec_char = /[^a-z][^A-Z][^0-9]/g; 
+
+
+        password = prompt("Enter Your Password\nIt must at least 6 characters long\nIt should not start with a number\nIt should contain alphabets and numbers");
+
+       
+        if (password != null )
+        {
+             // 1.   Check Password length  == 6
+            if( password.length == 6 )
+            {
+                alert("Fisrt check Passed!\n Password Length is: " + password.length);
+
+                first_letter = password.charCodeAt(0);
+                first_let_num = password.split("");
+                console.log(`first_let_num = password.split("") ===== `, first_let_num = password.split(""));
+
+
+            // 2.   Check Second Letter not a number
+                if( ( first_letter >= 48 ) && ( first_letter <= 57 )  )
+                {
+                    alert("Second Check Fail!\n First character is a number!");
+                    document.write("<h4>Password Validation</h4>");
+                    document.write("Enter Password: " + password);
+                    document.write("<br>Second Check Fail!\n First character is <b>" + first_let_num[0] + "</b> a number!");
+                    document.write("<br>Please Enter a Valid Password");
+                }
+                else if(    (( first_letter >= 65 ) &&  ( first_letter <= 90 )) || 
+                            (( first_letter >= 97 ) &&  ( first_letter <= 122 ))
+                        )
+                {
+                    alert("Second Check Passed!\n First character is not a number!");
+                    
+            // 3.   Check Last Condition Letter and number only
+                    
+                    // RegExp
+                    ///Regex for A-Z a-z 0-9
+                    // true if regex match
+                    // false if regex not match
+     
+                    letter_check_low = pattern_lower.test(password);      //true if match as per regex otherwise viseversa
+                    letter_check_upp = pattern_upper.test(password);      //true if match as per regex otherwise viseversa
+                    spec_char_check = pattern_Spec_char.test(password);
+                    if( (letter_check_low == true || letter_check_upp == true) && spec_char_check == false)                                          
+                    {
+                    
+                        console.log("Valid Password.");
+                        document.write("<h4>Password Validation</h4>");
+                        document.write("Entered Password: " + password);
+                        document.write("<br><b>Valid Password</b>");
+
+                        
+                    }
+                    else
+                    {
+                        console.log("Invalid Password.");
+                        document.write("<h4>Password Validation:</h4>");
+                        document.write("Entered Password: " + password);
+                        document.write("<br><b>Invalid Password, Your Password!<br> must contain only alphabets and numbers,<br>and not Special Character</b>");
+                        document.write("<br><br>Please Enter a Valid Password");
+                    }
+
+
+                }
+                else
+                {
+                    alert("Second Check Fail!\nYour First Letter may be a Special Character.")
+                }
+            }
+            else
+            {
+                alert("First Check Fail!\nPassword Length is not equal to 6\nYour password length: " + password.length);
+                console.log("First Check Fail!\nPassword Length is not equal to 6\nYour password length: " + password.length);
+                document.write("<h4>Password Validation</h4>");
+                document.write("Entered Password: " + password);
+                document.write("<br>First Check Fail!\nPassword Length is not equal to 6<br>Your password length: " + password.length);
+                document.write("<br>Please Enter a Valid Password");
+            }
+            
+        }
+       
 }
 
 function ques16() {
