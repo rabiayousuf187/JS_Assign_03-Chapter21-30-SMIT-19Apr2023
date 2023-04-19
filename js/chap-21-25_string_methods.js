@@ -447,46 +447,84 @@ function ques16() {
     // var university = “University of Karachi”; 
     // Display the elements of array in your browser.
     
-    // declare
-    var number_for_multi = 5,
-        result = 1;
+    // Input
+    var university = "University of Karachi",
+        letter_arr = new Array ();
 
-    console.log("Print Multiples of 5 Ranging 1 to 100:");
-    document.write("<h4>Print Multiples of 5 Ranging 1 to 100:</h4>");
-    for (var a = 1; result < 100; a++) {
-        console.log(a);
-        result = a * number_for_multi;
-        document.write(result + ",");
-    }
+
+        // Input // profeSSor aLi nAqvi is a gReaT cOMputer sciEntIST.
+
+        document.write("<h4>Split String:</h4>");
+        document.write("Your given string is: " + university);
+        document.write("<h4>After Split String:</h4>");
+
+        for(var i = 0; i < university.length ; i++)
+        {
+            letter_arr[i] = university[i].split("");
+            document.write(letter_arr[i] + "<br>");
+    
+        }
 }
 function ques17() {
     // Write a program to display the last character of a user input.
     
-    // declare
-    var number_for_multi = 5,
-        result = 1;
+    // Input
+    var input,
+        letter_arr = [],
+        last_char_index;
 
-    console.log("Print Multiples of 5 Ranging 1 to 100:");
-    document.write("<h4>Print Multiples of 5 Ranging 1 to 100:</h4>");
-    for (var a = 1; result < 100; a++) {
-        console.log(a);
-        result = a * number_for_multi;
-        document.write(result + ",");
-    }
+
+     input = prompt("Enter the Content\nI will Show You the Last Character");
+
+        if (input != null && input != "")
+        {
+
+            document.write("<h4>Display Last Character:</h4>");
+            document.write("User Input: " + input);
+
+            //last char index
+            letter_arr = input.split("");
+            last_char_index = input.length - 1;
+            document.write("<br>Last Character of input: " + input[last_char_index]);
+  
+
+        }
+        else
+        {
+            alert("You Quit session.")
+        }
+
 }
 function ques18() {
     // You have a string “The quick brown fox jumps over the lazy dog”. 
     // Write a program to count number of occurrences of word “the” in given string.
     
-    // declare
-    var number_for_multi = 5,
-        result = 1;
+    // Input
+    var input = "The quick brown fox jumps over the lazy dog",
+        word_arr = [],
+        count = 0;
 
-    console.log("Print Multiples of 5 Ranging 1 to 100:");
-    document.write("<h4>Print Multiples of 5 Ranging 1 to 100:</h4>");
-    for (var a = 1; result < 100; a++) {
-        console.log(a);
-        result = a * number_for_multi;
-        document.write(result + ",");
-    }
+
+        document.write("<h4>Count Number of Occurrences of Word:</h4>");
+        document.write("User string: " + input);
+        input = input.toLowerCase();
+        word_arr = input.split(" ");
+        
+
+        //last char index
+        for (var i = 0 ; i < word_arr.length ; i++)
+        {
+            console.log(word_arr.length, i);
+            if( word_arr[i]  == "the" )
+            {
+                count++; 
+            }
+            if( i == word_arr.length-1 )
+            {
+                document.write("<br>There are " + count + " occurrence(s) of word 'the'");
+                break;
+            }
+            
+        }
+
 }
