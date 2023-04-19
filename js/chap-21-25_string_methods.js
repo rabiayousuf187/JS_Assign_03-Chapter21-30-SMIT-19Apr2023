@@ -73,37 +73,14 @@ function ques4() {
     // Write a program to find the last index of letter “l” in the word “Hello World” and display the result in your browser.
 
     // declare
-    var table_num,
-        table_length,
-        table_result;
+    let  string = "Hello World";
 
-    // Initialize table num
-    table_num = prompt("Enter a Number to show its multiplication table:")
+    let last_l_index = string.lastIndexOf("l"); 
 
-    document.write("<h4>Multiplication table of " + table_num + ":</h4>");
+     document.write("<h4>Character Index:</h4>");
 
-    if (table_num !== null) {
-        // Initialize table length
-        table_length = prompt("Enter length of multiplication table:")
-
-        document.write("<h4>Length " + table_length + ":</h4>");
-
-        console.log(table_num, table_length);
-
-        if (table_length !== null) {
-
-            for (var a = 1; a <= table_length; a++) {
-                table_result = table_num * a;
-                document.write(table_num + " * " + a + " = " + table_result + "<br>");
-            }
-        }
-        else {
-            alert("You didn't enter Table length\nSession has been terminated.")
-        }
-    }
-    else {
-        alert("You Quit the Session.")
-    }
+     document.write("<b>String: " + string + "</b><br>");
+     document.write("<b>Index of 'l': " + last_l_index);
 
 }
 
