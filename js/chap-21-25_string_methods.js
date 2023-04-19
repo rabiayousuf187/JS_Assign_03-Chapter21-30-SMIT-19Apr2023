@@ -1,26 +1,41 @@
 function ques1(){
-    //    1.   Declare and initialize an empty multidimensional array.
-           //         (Array of arrays)
+        // Write a program that takes two user inputs for first and last name 
+        // using prompt and merge them in a new variable titled fullName. 
+        // Greet the user using his full name.
    
-           // declare
-           var multi_dimension_array = [];
-   
-           // Initialize
-           multi_dimension_array  = [
-                                     [], 
-                                     [],
-                                     [] 
-                                   ];
-   
-           document.write("var multi_dimension_array = [];<br>");
-           document.write(`Multi Deminsion Array:<br>multi_dimension_array  = [
-                   [], 
-                   [],
-                   [] 
-                 ];`);
-           console.log("Multi Deminsion Array: ", multi_dimension_array);
-   
-   
+           let  first_name,
+            last_name,
+            fullName;
+
+            first_name = prompt("Enter Your First Name:");
+            last_name = prompt("Enter Your Last Name:");
+            
+            if (first_name != null)
+            {
+               
+                if (last_name != null)
+                {
+                    
+                    fullName = first_name + " " + last_name;
+                    if(+first_name <= 0 || +first_name > 0 || +last_name <= 0 || +last_name > 0 )
+                    {
+                        alert("Invalid Input in First Name or Last Name.")
+                    }
+                    else
+                    {
+                        alert("Hello " + fullName + "!\nWelcome in Web Development Portal")
+                    }
+
+                }
+                else
+                {
+                    alert("You didn't enter Last Name.\nSession Terminated.");
+                }
+            }
+            else
+            {
+                alert("You didn't enter First Name.\nSession Terminated.");
+            }
    }
    
    function ques2(){
