@@ -198,33 +198,58 @@ function ques10() {
 
 function ques11() {
     // Write a program that takes user input. Convert and show the input in title case.
+    
     // declare
-    var number_for_multi = 5,
-        result = 1;
+    let  in_string;
 
-    console.log("Print Multiples of 5 Ranging 1 to 100:");
-    document.write("<h4>Print Multiples of 5 Ranging 1 to 100:</h4>");
-    for (var a = 1; result < 100; a++) {
-        console.log(a);
-        result = a * number_for_multi;
-        document.write(result + ",");
+    in_string = prompt("Enter Any Content to Convert into Title Case:");
+    
+    if (in_string != null && in_string != null)
+    {
+       document.write("<h4>Convert into Title Case:</h4>");
+       document.write("User Input: " + in_string + "<br>");
+
+    
+        var first_letter = in_string.substr(0,1);      //only 1st letter uppercase
+        var first_letter_upper = first_letter.toLocaleUpperCase();
+        console.log(first_letter_upper);
+        
+        var remain_letters = in_string.substr(1);      //
+        console.log(remain_letters);
+
+        var remain_letters_lower = remain_letters.toLowerCase();         //only remain letters lowercase
+        console.log(remain_letters_lower);
+
+        var updated_string = first_letter_upper + remain_letters_lower;
+       document.write("Title Case: " + updated_string);
+    }
+    else
+    {
+        alert("You Quit Session.");
     }
 }
 
 function ques12() {
     // /Write a program that converts the variable num to string. var num = 35.36 ; Remove the dot to display “3536” display in your browser.
     
-    // declare
-    var number_for_multi = 5,
-        result = 1;
+    var num = 35.36 ;
 
-    console.log("Print Multiples of 5 Ranging 1 to 100:");
-    document.write("<h4>Print Multiples of 5 Ranging 1 to 100:</h4>");
-    for (var a = 1; result < 100; a++) {
-        console.log(a);
-        result = a * number_for_multi;
-        document.write(result + ",");
-    }
+        num = num.toString();
+
+               document.write("<h4>Remove Decimal:</h4>");
+               document.write("Initial Number: " + num + "<br>");
+
+               var dot_index = num.indexOf(".");
+
+               var before_dot = num.slice( 0 , dot_index );
+               console.log(before_dot);
+
+               var after_dot = num.slice( dot_index + 1 );
+               console.log(after_dot);
+                
+                var rem_dot_num = before_dot + after_dot;
+               document.write("Result: " + rem_dot_num );
+               document.write("<br><br>Result Type: " + typeof rem_dot_num );
 }
 
 function ques13() {
@@ -236,16 +261,38 @@ function ques13() {
     // ASCII code of @ is 64
     
     // declare
-    var number_for_multi = 5,
-        result = 1;
+    var username;
 
-    console.log("Print Multiples of 5 Ranging 1 to 100:");
-    document.write("<h4>Print Multiples of 5 Ranging 1 to 100:</h4>");
-    for (var a = 1; result < 100; a++) {
-        console.log(a);
-        result = a * number_for_multi;
-        document.write(result + ",");
+        
+        
+
+
+    // var num ;
+    username = prompt("Enter Username:");
+
+    var include_at_rate = username.indexOf("@"),
+        include_excla_mar = username.indexOf("!"),
+        include_dot = username.indexOf("."),
+        include_com = username.indexOf(",");
+        console.log(include_at_rate);
+
+    if(username != null)
+    {
+        if( include_at_rate >= 0 || include_com >= 0 || include_dot >= 0 || include_excla_mar >= 0)
+        {
+            alert("Please Enter a valid username");
+            username = prompt("Enter a Valid Username:");
+        }
+        else
+        {
+            alert("username is valid");
+        }
     }
+    else
+    {
+        alert("You didn't enter Any username.")
+    }
+    
 }
 
 function ques14() {
