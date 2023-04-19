@@ -37,39 +37,35 @@ function ques2() {
     // 2. Write a program to take a user input about his favorite 
     // mobile phone model.Find and display the length of user input in your browser
 
-    // declare
-    var multi_dimension_array = [];
+    let  mob_model;
 
-    // Initialize
-    multi_dimension_array = [
-        [0, 1, 2, 3],
-        [1, 0, 1, 2],
-        [2, 1, 0, 1]
-    ];
+    mob_model = prompt("Enter Your Favorite Mobile Phone Model:\nI will tell You length of Input");
+    console.log(mob_model);
 
-    console.log("Multi Deminsion Array: ", multi_dimension_array);
-    document.write("<h4>MultiDimension Array:</h4>");
-    for (var a = 0; a < 3; a++) {
-        for (var b = 0; b < 4; b++) {
-            document.write(multi_dimension_array[a][b] + "&nbsp;&nbsp;");
-        }
-        document.write("<br>");
+    if (mob_model != null && mob_model != "")
+    {
+       document.write("<h4>String Length:</h4>");
+       document.write("My Favorite phone is: " + mob_model + "<br>");
+       document.write("Length of string: " + mob_model.length);
     }
-
+    else
+    {
+        alert("You Quit Session.");
+    }
 }
 
 function ques3() {
     // Write a program to find the index of letter “n” in the word “Pakistani” and display the result in your browser .
    
     // declare
-    var count;
+    let  string = "Pakistani";
 
-    // Initialize
-    document.write("<h4>Counting from 1 to 10: </h4>");
-    for (count = 1; count <= 10; count++) {
-        document.write(count + "<br>");
+    let n_index = string.indexOf("n"); 
 
-    }
+     document.write("<h4>Character Index:</h4>");
+
+     document.write("<b>String: " + string + "</b><br>");
+     document.write("<b>Index of 'n': " + n_index);
 }
 
 function ques4() {
