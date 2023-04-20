@@ -88,7 +88,10 @@ function ques4(){
 
     function fun_gen_ran(){
 
-        let gen_ran_dics = Math.round(Math.random() * 6);
+        let gen_ran_dics = Math.random() * 6;
+        console.log(gen_ran_dics);
+        
+        gen_ran_dics = Math.ceil(gen_ran_dics);
         console.log(gen_ran_dics);
 
         return gen_ran_dics;
@@ -110,13 +113,52 @@ function ques4(){
 }
 function ques5(){
     // Write a program that simulates a coin toss using random() method of JS Math class. Display the value of coin in your browser
-    let boolean_arry = [];
-    
-    // initialize
-    boolean_array = [true , false];
-    document.writeln(`let boolean_arry = [];`);
-    document.writeln(`boolean_array = [true , false];`);
-    console.log(boolean_array);
+    function fun_coin_val(){
+
+        let gen_ran = fun_gen_ran();
+        let rand_coin_val = Math.round(gen_ran);
+
+        console.log(rand_coin_val);
+        return rand_coin_val;
+
+    }
+
+
+    function fun_gen_ran(){
+
+        let gen_ran_coin = Math.random() * 2;
+        console.log(gen_ran_coin);
+        
+        gen_ran_coin = Math.ceil(gen_ran_coin);
+        console.log(gen_ran_coin);
+
+        return gen_ran_coin;
+
+    }
+
+    let coin_val = fun_coin_val();
+    console.log(coin_val);
+
+    document.write ("<h4>Coin Toss:</h4>");
+    document.write("<br>Random Value: <b>" + coin_val + "</b>");
+
+
+    if ( coin_val == 1 )
+    {
+        document.write("<br>random coin value: <b>Tails</b>");  
+    }
+    else if( coin_val == 2 )
+    {
+        console.log(coin_val);
+        document.write("<br>random coin value: <b>Heads</b>");
+    }
+    else if ( coin_val == 0)
+    {
+
+      alert("Try Again");
+      document.write("<br>Your value is invalid.");
+        
+    }
 }
 function ques6(){
     // Write a program that shows a random number between 1 and 100 in your browser.
