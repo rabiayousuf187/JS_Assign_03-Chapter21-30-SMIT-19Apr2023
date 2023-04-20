@@ -97,20 +97,13 @@ function ques4(){
         return gen_ran_dics;
     }
 
-
-    // let gen_ran_dics = Math.random() * 6;
-    // console.log(gen_ran_dics);
-
     let dics_val = fun_dics_val();
     console.log(dics_val);
 
-    document.write ("<h4>Random Dics Value:</h4>");
-    document.write("<br>random dice value: <b>" + dics_val + "</b>");
-    // document.write ("To genarate Random Dics Value:");
-    // document.write ("<button class='btn btn-primary' onclick='fun_dics_val()'> Click Here</button>");
-
-
+    // document.write ("<h4>Random Dics Value:</h4>");
+    // document.write("<br>random dice value: <b>" + dics_val + "</b>");
 }
+
 function ques5(){
     // Write a program that simulates a coin toss using random() method of JS Math class. Display the value of coin in your browser
     function fun_coin_val(){
