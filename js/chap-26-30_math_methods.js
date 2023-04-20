@@ -198,6 +198,33 @@ function ques7(){
     // b. 50kgs 
     // c. 50.2kgs 
     // d. 50.2kilograms
+
+    let parse_num;
+    
+    function fun_parse_num()
+    {
+
+        parse_num = parseFloat( input_num );            //return first num from the string till end of the num 
+        return parse_num;
+
+    }
+
+    let input_num = prompt("Enter Your Weight in kilograms:\na. 50\nb. 50kgs \nc. 50.2kgs\nd. 50.2kilograms");
+    console.log(parse_num);            
+
+    if( input_num != null && input_num != "")
+    {
+        parse_num = fun_parse_num( input_num );  
+        console.log(parse_num);            
+
+        document.write("<h4>User Weight:</h4>");
+        document.write("The weight of user is " + parse_num + "</b> kilograms");
+
+    }
+    else
+    {
+        alert("You didn't Answer or Your input number is not a positive integer.")
+    }
 }
    
 function ques8(){
