@@ -230,5 +230,55 @@ function ques7(){
 function ques8(){
     // Write a program that stores a random secret number from 1 to 10 in a variable. Ask the user to input a number between 1 and 10. If the user input equals the secret number, congratulate the user.
 
+    let input_num;
+    let random_secret_num;
+
+    function compare_secret_num()
+    {
+
+        random_secret_num = Math.ceil(Math.random() * 10);
+        console.log("random_secret_num ", random_secret_num );
+        
+        if( random_secret_num == +input_num) 
+        {
+            alert("Congratulation!\nYour Number is Match with Random Number");
+        }
+        else
+        {
+            alert("Try Again\nYour Input Number is not Match");
+        }         
+        
+        
+    }
+    
+    input_num = prompt("Enter a Number between 1 and 10:");
+    console.log("input_num ==== ", input_num );
+ 
+    if( input_num != null )
+    {
+        if( +input_num <= 0 )
+        {
+           
+            alert("Invalid Number! Input Number is less than or equal to 0");
+
+        }
+        else if ( ( +input_num >= 1 ) && ( +input_num <= 10 ) )
+        {
+            // alert("Your Input Number is between 1 and 10");
+
+            compare_secret_num( +input_num );  
+            // console.log(secret_result);            
+
+        }
+        else
+        {
+            alert("Invalid NUmber! Input Number is greater than 10")
+        }
+
+    }
+    else
+    {
+        alert("You didn't Answer or Your input number is not a positive integer.")
+    }
 
 }
