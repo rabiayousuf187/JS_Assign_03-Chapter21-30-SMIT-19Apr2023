@@ -252,7 +252,7 @@ function ques12() {
                document.write("<br><br>Result Type: " + typeof rem_dot_num );
 }
 
-function ques13() {
+function ques13(){
     // Write a program to take user input and store username in a variable. If the username contains any special symbol among [@ . , !], prompt the user to enter a valid username. For character codes of [@ .
     // Note: 
     // ASCII code of ! is 33 
@@ -262,37 +262,48 @@ function ques13() {
     
     // declare
     var username;
-
-        
-        
-
-
-    // var num ;
+    var invalid;
+    var include_at_rate, include_excla_mar, include_dot, include_com;
+    
     username = prompt("Enter Username:");
-
-    var include_at_rate = username.indexOf("@"),
-        include_excla_mar = username.indexOf("!"),
-        include_dot = username.indexOf("."),
-        include_com = username.indexOf(",");
-        console.log(include_at_rate);
-
-    if(username != null)
+    console.log("username ==== ", username);
+    
+    function check_username()
     {
+        include_at_rate = username.indexOf("@");
+        include_excla_mar = username.indexOf("!");
+        include_dot = username.indexOf(".");
+        include_com = username.indexOf(",");
         if( include_at_rate >= 0 || include_com >= 0 || include_dot >= 0 || include_excla_mar >= 0)
         {
-            alert("Please Enter a valid username");
-            username = prompt("Enter a Valid Username:");
+            invalid = true;
+            output(invalid);
         }
         else
         {
             alert("username is valid");
         }
     }
+
+    if(username != null && username != "")
+    {
+        check_username(username);    
+    }
     else
     {
         alert("You didn't enter Any username.")
     }
     
+    function output(invalid){
+        if(invalid)
+        {
+            alert("Please Enter a valid username");
+            username = prompt("Enter a Valid Username:");
+            check_username(username);
+        }
+
+    }
+
 }
 
 function ques14() {
