@@ -154,7 +154,42 @@ function ques5(){
     }
 }
 function ques6(){
-    // Write a program that shows a random number between 1 and 100 in your browser.
+    // 6. Write a program that shows a random number between 1 and 100 in your browser.
+
+    function fun_rand_val(){
+
+        let gen_ran = fun_gen_ran();
+        let rand_val_1_100 = Math.round(gen_ran);
+
+        console.log(rand_val_1_100);
+        return rand_val_1_100;
+
+    }
+
+
+    function fun_gen_ran(){
+
+        let gen_ran_1_100 = Math.ceil(Math.random() * 100);
+        console.log(gen_ran_1_100);
+
+        return gen_ran_1_100;
+
+    }
+
+    let rand_val = fun_rand_val();
+    console.log(rand_val);
+
+    document.write ("<h4>Random Values Between 1 -- 100:</h4>");
+
+    if( ( rand_val >= 1 ) && ( rand_val <= 100 ) )
+    {
+        document.write("<br>Random Number between 1 and 100: <b>" + rand_val + "</b>");
+    }
+    else 
+    {
+      alert("Try Again");
+      document.write("<br>Your Random value is Out of Range: <b>" + rand_val + "</b>");
+    }
 
 }
 function ques7(){
