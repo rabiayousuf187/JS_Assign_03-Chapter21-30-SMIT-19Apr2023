@@ -28,6 +28,24 @@ function ques2(){
     // b. round off value of the number 
     // c. floor value of the number 
     // d. ceil value of the number
+
+    let input_num = prompt("Enter Negative Number to Display:\n1. Round OFF\n2. Floor Value\n3. Ceil Value\ne.g: -3.142");
+
+    if( input_num != null && +input_num < 0)
+    {
+        let round = Math.round( +input_num );
+        let floor = Math.floor( +input_num );
+        let ceil = Math.ceil( +input_num );
+
+        document.write("<b>number:</b> " + +input_num);
+        document.write("<br><b>round off value:</b> " + round);
+        document.write("<br><b>floor value:</b> " + floor);
+        document.write("<br><b>ceil value:</b> " + ceil);
+    }
+    else
+    {
+        alert("You didn't Answer or Your input number is not a negative integer.")
+    }
 }
 function ques3(){
     // Write a program that displays the absolute value of a number. E.g. absolute value of -4 is 4 & absolute value of 5 is 5
