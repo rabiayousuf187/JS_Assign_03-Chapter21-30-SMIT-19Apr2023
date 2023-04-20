@@ -48,14 +48,32 @@ function ques2(){
     }
 }
 function ques3(){
-    // Write a program that displays the absolute value of a number. E.g. absolute value of -4 is 4 & absolute value of 5 is 5
+    /// 3. Write a program that displays the absolute value of a
+        //     number.
+        //     E.g. absolute value of -4 is 4 & absolute value of 5 is 5
 
+        let input_num = prompt("Enter Number to Display Absolute Value:\ne.g: -4");
 
-    // initialize
-    string_array = ["Barein" , "Ruby" , "Marry" , "Rosella"];
-    document.writeln(`let string_arry = [];`);
-    document.writeln(`string_array = ["Barein" , "Ruby" , "Marry" , "Rosella"];`);
-    // console.log(string_array);
+        if( input_num != null && +input_num < 0)
+        {
+            let absolute_val = Math.abs(+input_num );
+    
+            document.write("<h4>Absolute Value:</h4>");
+            document.write("<br>The absolute value of <b>" + input_num + "</b> is <b>" + absolute_val + "</b> ");
+            
+        }
+        else if( input_num != null && +input_num > 0)
+        {
+            let absolute_val = +input_num;
+    
+            document.write("<h4>Absolute Value:</h4>");
+            document.write("<br>The absolute value of <b>" + input_num + "</b> is <b>" + absolute_val + "</b> ");
+            
+        }
+        else
+        {
+            alert("You didn't Answer or Your input number is not a negative integer.")
+        }
 }
 function ques4(){
     // Write a program that simulates a dice using random() method of JS Math class. Display the value of dice in your browser.:
